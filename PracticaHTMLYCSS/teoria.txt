@@ -1,0 +1,11 @@
+HTML es una herramienta para generar la estructura de mi pagina web
+compuesta de etiquetas que indica que contenidos tendra la pagina y en que secciones.
+
+
+CSS indica las propiedades que tendra cada elemento que compone la estructura de la pagina. indica como se mostraran los elementos creados por html. Funciona mediante reglas de estilo
+El selector referencia al elemento html al que se quiere aplicar las propiedades y el bloque de propiedades indicara las propiedades del objeto html
+
+p{
+color:blue;
+Font-size: 18px;
+}

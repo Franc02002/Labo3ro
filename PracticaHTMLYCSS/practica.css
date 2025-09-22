@@ -1,0 +1,23 @@
+ 
+    /*SELECTORES*/
+ p {
+    /*p es un selector que selecciona a todos los elementos p del html asociado */
+    color: blue
+ }  
+
+    /* SELECTORES POR CLASE, con este metodo puedo asignarle una clase a cualquier elemento
+    y al momento de darle estilo puedo hacerlo a la clase */
+ 
+    .combate{
+        color:red
+    }
+
+    .defensa{
+        color:green
+    }
+
+    /* SELECTOR POR ID , se utiliza en unicidad por elemento, de modo que solo un objeto tendra el mismo id*/
+
+    #defensaID {
+        color:violet
+    }
