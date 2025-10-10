@@ -1,9 +1,14 @@
 <!DOCTYPE html> <!--define la version de html usada-->
 <html lang="en"> <!--abre y cierra definiendo que lo q esta adentro es parte de la web-->
 <head>
-   <!--LO QUE QUIERO MOSTRAR EN EL ENCABEZADO DE LA PAGINA-->
+ <!-- ACA VA TODO EL METADATO DE LA PAGINA, AQUELLAS HERRAMIENTAS QUE QUIERO QUE LA WEB UTILICE
+  
+    <link rel="icon" type="descripcion" href= "ruta imagen"> ESTE META ES PARA AGREGARLE UNA FOTO A LA PESTAÑA DE LA WEB
+ 
+ -->
 </head>
 <body>
+    CRTL ALT FLECHITA ABAJO PARA TENER VARIOS PUNTEROS Y ESCRIBIR EN MAS DE UNA LINEA A LA VEZ
     <!--ACA VA TODO EL CONTENIDO DE LA PAGINA-->
     <h1>
         <!--cada h es un encabeza y su orden numerico va por importancia 
@@ -32,26 +37,46 @@
 
          <!-- PARA COLOCAR UN TITULO SOBRE UN OBJETO COLOCA TITLE: ALADO DE LA DELACARACION DE LA ETIQUETA-->
      
-        
-        <!--
-         VINCULOS
-         Los enlaces en html funcionan para hacer referencia de hipertexto a una etiqueta
-         Se hace con la etiqueta 
-         <a href="vinculo"> 
-        "lo que tendra el texto que al apretarlo mandara al hipervinculo" 
+   
+        <a href="vinculo"> 
+             <!--
+            VINCULOS
+            Los enlaces en html funcionan para hacer referencia de hipertexto a una etiqueta
+            Se hace con la etiqueta 
+            VINCULOS QUE SE ABREN EN OTRA PESTANIA
+            Cuando necesito que el vinculo me abra otra pesta;a y no reemplaze la existente 
+            <a href= "vinculo" tarjet="_blank"> 
+            "contenido"
+            </a> -->
         </a>
 
-        VINCULOS QUE SE ABREN EN OTRA PESTANIA
-        Cuando necesito que el vinculo me abra otra pesta;a y no reemplaze la existente 
-        <a href= "vinculo" tarjet="_blank"> 
-            "contenido"
-        </a>   
-        -->
+        
+        
 
         <!--
+            LAS ETIQUETAS PUEDEN TENER ATRIBUTOS CON (ATRIBUTO)= CONTENIDO ,
+            QUE TENDRA EL ATRIBUTO.EXISTEN  MUCHOS TIPOS DE ATRIBUTOS, 
+            PERO EXISTEN ALGUNOS CLAVES ID Y CLASS Q SON GLOBALES 
+            PQ CUALQUIER ETIQUETA LOS PUEDE TENER
+          -->   
+            ETIQUETAS GLOBALES
+
+            ID= PARA IDENTIFICAR LA IMAGEN, SOLO PUEDE EXISTIR UN ELEMETO 
+            EN TODO EL DOCUMENTO CON EL MISMO VALOR
+            
+            CLASS= FORMA DE IDENTIFICAR ELEMENTOS Q SE REPITEN
+
+
+       
+
+        
         ETIQUETA IMG PARA IMAGENES 
-            <img src"ruta de la imagen" alt="descripcion de la imagen para contexto">
-           
+            <img loading= "lazy" src="ruta de la imagen" alt="descripcion de la imagen para contexto">
+
+            -LOADING LAZY PARA QUE LA IMAGEN NO CARGUE APENAS INICIE LA PAGINA
+            
+
+
         RUTAS RELATIVAS O DIRECTAS  
             Si tengo la imagen dentro de una carpeta fuera de donde estoy trabajando
             tengo que escribir la ruta de forma diferente o comunmente relativa.
@@ -61,29 +86,54 @@
 
         EXISTEN ETIQUETAS DE BLOQUE Y ETIQUETAS DE LINEA
         
-        -->
+        
 
-        <!--
+        
         FORMULARIOS
         imputs son tipos de datos que se le piden al usuario,estos luego de ingresarlos
         se podran guardar en alguna estructura o base de datos para fines de la empresa
 
-        <form>
-         aqui defino los campos de texto ue tendra el formulario
+        <form method="post el mas comun" action="metodo para llamar a la API">
          
-         FORMA DE TOMAR UN DATO CON IMPUT(configuracion interna)
-         <imput type="tipo de imput" name="nombre del imput"> sera una etiqueta para tipear texto 
+            <!--aqui defino los campos de texto ue tendra el formulario  
+            FORMA DE TOMAR UN DATO CON IMPUT(configuracion interna)
+            -->
+            <fieldset>
+                AGRUPACION DE LOS DISTINTOS IMPUTS Q PUEDEN EXISTIR
+                <legend> nombre del formulario o tarea q realiza</legend>
+                
+                <div se le puede agregar una clase para luego con css darle estilo>
+                <label>nombre del casillero
+                    <input 
+                    type="text" ESTE ES IMPORTANTE PQ DA INFORMACION DE Q SE TRATA EL IMPUT
+                    name="name"
+                    placeholder="letra en el fondo del casillero"
+                    required SI SE QUIERE QUE SE COMPLETE EL CAMPO SI O SI>
+                </label>
+            </fieldset>
+            </div>
+
+            <details> PARA UN TEXTO QUE AL DESPLEGARLO DE MAS INFORMACION
+                <summary>LA INTRODUCCION DEL TEXTO</summary>
+                <p> LO QUE QUIERO QUE SE AMPLIE CUANDO DOY CLICK</p>
+            </details>
+
+            <imput type="tipo de imput" name="nombre del imput"> sera una etiqueta para tipear texto 
 
 
-         PARA TOMAR UN DATO DE MANERA OBLIGATORIA(funcionalidad)
-         <imput type="tipo de imput" required>    
+            PARA TOMAR UN DATO DE MANERA OBLIGATORIA(funcionalidad)
+            <imput type="tipo de imput" required>    
 
-         PARA TENER UN TEXTO DENTRO DE LA CASILLA
-         <imput type="tipo de imput" placeholder="contenido dentro del imput">     
-        </form>     
-        -->
+            PARA TENER UN TEXTO DENTRO DE LA CASILLA
+            <imput type="tipo de imput" placeholder="contenido dentro del imput">     
+                
+            SI COLOCO UN BOTON DENTRO DE UN FORMULARIO SE TRANSFORMA
+            A TIPO SUBMIT DE INMEDIATO
+            </form>     
+        
 
-        <!-- CAJAS:
+         CAJAS:
+            <!--
             PADDING: EL RELLENO ENTRE EL CONTENIDO Y LOS BORDES DE LA CAJA
             CONTENT:
             MARGIN: SEPARA UNA CAJA DE LAS OTRAS, ES UN RELLENO EXTERNO
@@ -91,10 +141,61 @@
             BORDER RADIUS: REDONDEA LA CAJA 
             WIDTH: PARA MOVER EL CONTENIDO DENTRO DE LA CAJA
             HEIGHT: PARA MOVER EL CONTENIDO DENTRO DE LA CAJA
+            -->
 
 
-            <div> contenido <div/> este es un separador para cajas 
+            <div> <!--contenido--> 
+            <div/> ESTE ES UN SEPARADOR DE CAJAS
+                    SE UTILIZA CUANDO EL CONTENIDO QUE ESTA DENTRO  
+                    CARECERA DE SEMANTICA Y NO HAY PROBLEMA SI NO LE 
+                    ASIGNO UNA ETIQUETA ESPECIFICA EXISTENTE
             
-        -->
+             
+        
+        
+        LA SEMANTICA ES MUY IMPORTANTE EN HTML PORQUE VA DANDO UNA EXPLICACION 
+        SOBRE LAS ETIQUETAS Y LA FUNCION DE SU CONTENIDO
+
+        <main>
+            <!-- EN EL MAIN SE COLOCA EL CONTENIDO PRINCIPAL DE LA PAGINA
+             SOLO PUEDE HABER UNA ETIQUETA MAIN EN TODA LA WEB
+            -->
+        </main>
+
+        <aside>
+            <!-- CONTENIDO QUE DA CONTEXTO PERO NO ES EL FLUJO PRINCIPAL-->
+        </aside>
+
+        <article>
+            <!-- ES UN ELEMENTO QUE AL SACARLO DE SU SITIO SIGUE
+             TENIENDO SENTIDO Y NO DEPENDE DE DONDE ESTA-->
+        </article>
+
+        <footer>
+            <!--REPRESENTA UN PIE DE PAGINA-->
+            <small>
+                <!--ES PARA DAR INFORMACION ANEXA QUE NO SEA TAN IMPORTANTE Y
+                SE VERA MAS PEQUEÑA, ACLARACION CORTITA-->
+            </small>
+        </footer>
+
+        <section>
+            <!--ABARCA SECCIONES GENERICAS DE UN DOCUMENTO-->
+        </section>
+
+            <nav>
+                <!--UTILIZADO PARA NAVEGAR FUERA O DENTRO DE LA WEB-->
+                <a href="#unasecciondelaweb">nombredelaseccion</a> navega dentro de la misma web
+                <a> href="#unaurlexterna" target= "_blank" ESTO PARA QUE ME ABRA UNA PESTAÑA EN VEZ DE REEMPLAZARLA
+                    rel="noreferrer"> ESTO PARA QUE NO HAYA REFERENCIA DESDE DONDE SE VIENE
+                    nombredelaexterna</a> nave de manera externa
+            </nav>
+        
+        <div role="nombre del rol">
+          EL CONTENIDO QUE TENDRA EL ROL DESIGNADO
+          TRATARLO DE USAR CUANDO EL ROL SEA DEMASIADO ESPECIFICO
+          HTML TIENE ETIQUETAS PARA LA MAYORIA DE LOS ROLES MAS USADOS
+        </div>    
+
 </body>
 </html>

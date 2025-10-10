@@ -26,5 +26,77 @@
         background: red;
         width: 300px;
         height: 200px;
+        /* 
+        DENTRO DEL DIV UTILIZO
+        PADDING PARA DAR RELLENO ENTRE EL CONTENIDO Y LOS BORDES
+        WEIGHT PARA EL ALTO        
+        */
     }
+
+    .defensa:hover { /*PARA HACER ALGO AL PONER EL MOUSE ENCIMA DE ESE OBJETO*/
+        
+    }
+
+    .defensa:active{ /*para que haga algo cuando se use o este activo*/
+
+    }
+
+    /* SELECTORES COMBINADOS */
+
+    .clasecontenedora .clasequeestadentro{
+    /* ESTO SE USA CUANDO QUIERO USAR UNA CLASE QUE ESTA
+    REPETIDA EN VARIAS PARTES DE LA WEB PERO YO SOLO QUIERO
+    MODIFICAR LA QUE ESTA DENTRO DE UNA CLASE ESPECIIFCA
+    PARA ESTO MENCIONO LA CONTENEDORA Y LUEGO LA QUE 
+    QUIERO CAMBIAR, DE ESTA MANERA ME MODIFICARA SOLO
+    LA QUE ESTA DENTRO DE LA CONTENEDORA*/
+    }
+  
+
+    .clasecontenedora > .clasequeestadentro{
+        /*PARA APLICAR ALGO SOLAMENTE SOBRE UN HIJO DIRECTO
+    DE LA CLASE CONTENEDORA */
+    }
+    
+    /*
+    CAJAS EN LINEA Y EN BLOQUE CONCEPTOS
+    LINEA: SPAN A Y STRONG
+    CON EL SPAN SOLO PUEDO EDITAR EN LINEA, NO PUEDO EDTIAR EL ALTO O ANCHO
+
+    BLOQUE: DIV, SECTION ,...
+    CON EL DIV PUEDO MODIFICAR EL ALTO Y ANCHO
+
+    */
+    .clasecontenedora{
+        overflow: hidden /*para que un contenido no se salga de su recuadro o caja*/
+     }
+
+    /* MANEJO DE POSICIONES*/
+     .clasecontenedora{
+        position:absolute /*esto me dejara moverla a cualquier lado de la web*/
+
+       /* position:relative  ESTO PARA QUE DENTRO DE LA CLASE QUE CONTENGA AL RESTO DE COSAS,
+                            ESAS COSAS SE MUEVEN EN DENTRO DE LA CAJA CONTENEDORA */
+     }
+
+     /*FLEXBOX */
+     
+     /* PARA MOVER OBJETOS DENTRO DE UN BOX*/
+     .unaClase{
+        display:flex; /* activo el flex dentro de la clase*/
+        flex-flow: row nowrap;
+        
+        flex-grow:0; /*los elementos no crecen */
+        flex-shrink:1; /*los elementos puede reducir su tamanio
+        a uno mas pequeño que su flex-basis */
+        flex:auto;        /*EL CONTENIDO SE AJUSTA AUTOMATICAMENTE AL CONTENEDOR*/
+        flex-bases:0;     /*PARA QUE TODOS TENGNA EL MISMO ANCHO INDEPENDIENTEMENTE
+                            DEL CONTENIDO */
+        flex-bases: auto; /*SE AJUSTA SEGUN EL CONTENIDO */  
+        flex:1 ;          /*LOS ELEMENTOS PUEDE REDUCIR O CRECER INDEPENDIENTEMENTE
+                            DEL FLEX-BASIS */              
+     }
+
+
+    
     
