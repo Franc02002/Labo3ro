@@ -80,6 +80,8 @@
      }
 
      /*FLEXBOX */
+
+     /* FLEXBOX SOLO SE MUEVE EN VERTICAL O HORIZONTAL, NO AMBOS A LA VEZ */ 
      
      /* PARA MOVER OBJETOS DENTRO DE UN BOX*/
      .unaClase{
@@ -87,14 +89,28 @@
         flex-flow: row nowrap;
         
         flex-grow:0; /*los elementos no crecen */
-        flex-shrink:1; /*los elementos puede reducir su tamanio
+        flex-shrink:1; /*los elementos puede reducir su tamanioS
         a uno mas pequeño que su flex-basis */
         flex:auto;        /*EL CONTENIDO SE AJUSTA AUTOMATICAMENTE AL CONTENEDOR*/
         flex-bases:0;     /*PARA QUE TODOS TENGNA EL MISMO ANCHO INDEPENDIENTEMENTE
                             DEL CONTENIDO */
         flex-bases: auto; /*SE AJUSTA SEGUN EL CONTENIDO */  
         flex:1 ;          /*LOS ELEMENTOS PUEDE REDUCIR O CRECER INDEPENDIENTEMENTE
-                            DEL FLEX-BASIS */              
+                            DEL FLEX-BASIS */  
+        
+        /*FORMAS DE ALINEAR */ 
+        flex-direction: row; /*PARA UNA ORGANIZACION EN FILAS */
+        flex-direction: column; /*PARA UNA ORGANIZACION EN COLUMNAS */
+        
+        /*FORMAS DE ADMINISTRAR LOS ELEMENTOS DENTRO DE LA CAJA*/
+        /* PARA MOVER EL CONTENIDO SOBRE EL EJE PRINCIPAL*/
+        justify-content: la manera;
+
+        /*PARA MOVER EL CONTENIDO SOBRE EL EJE CRUZADO, OSEA EL INVERSO AL PRINCIPAL */
+        align-items: la manera;
+        
+
+        
      }
 
 
